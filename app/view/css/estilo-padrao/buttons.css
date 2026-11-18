@@ -1,0 +1,77 @@
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-danger,
+.btn-voltar,
+.btn-new button 
+.btn-trash{
+    min-height: 40px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.btn-primary,
+.btn-new button {
+    background-color: var(--verde-padrao);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-new button:hover {
+    background-color: var(--verde-hover);
+}
+
+.btn-secondary {
+    background-color: #eeeeee;
+    color: var(--preto-padrao);
+}
+
+.btn-outline,
+.btn-voltar {
+    background-color: white;
+    border: 1px solid var(--verde-padrao);
+    color: var(--verde-padrao);
+}
+
+.btn-outline:hover,
+.btn-voltar:hover {
+    background-color: var(--verde-claro);
+}
+
+.btn-danger {
+    background-color: var(--vermelho);
+    color: white;
+}
+
+.btn-voltar {
+    border: none;
+    background-color: transparent;
+    color: #666;
+    font-weight: 500;
+}
+
+.btn-voltar:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+.btn-trash{
+    background-color: transparent;
+    color: #e17474;
+    padding: 8px 10px;
+    border: 1.6px solid #e17474;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}

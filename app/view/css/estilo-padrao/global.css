@@ -1,0 +1,57 @@
+:root {
+    --verde-padrao: #1f7a3f;
+    --verde-hover: #176331;
+    --verde-claro: #e9f7ee;
+    --background-padrao: #f5f5f5;
+    --branco-padrao: #ffffff;
+    --preto-padrao: #191919;
+    --cinza-texto: #666666;
+    --cinza-borda: #dddddd;
+    --cinza-claro: #f3f4f6;
+    --vermelho: #c0392b;
+    --azul: #2563eb;
+    --sombra-card: 0 4px 14px rgba(0, 0, 0, 0.06);
+    --radius-padrao: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-padrao);
+    color: var(--preto-padrao);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}

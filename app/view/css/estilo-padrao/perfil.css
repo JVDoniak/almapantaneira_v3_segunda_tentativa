@@ -1,0 +1,325 @@
+/* 1. REGRAS COMPARTILHADAS (Estrutura, Cards e Grid) */
+
+/* ── Card principal ───────────────────────────────────────── */
+.edit-card-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;           
+    margin-bottom: 20px;
+}
+
+.edit-card-header .btn-outline {
+    position: static; 
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-doacao-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 28px 20px 24px;
+    margin: 20px 0 24px;
+}
+
+.main-content>.edit-doacao-card:not(:has(form)) {
+    padding-top: 28px !important;
+}
+
+.edit-h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: #333;
+    text-align: left;
+}
+
+.main-content>.edit-doacao-card:not(:has(form)) .edit-card-header {
+    padding-top: 0;
+}
+
+.main-content>.edit-doacao-card:not(:has(form)) .edit-h2 {
+    position: static;
+}
+
+.edit-card-header .btn-outline {
+    position: static; 
+}
+
+.edit-card-header p {
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+}
+
+.edit-header-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ── Grid de Formulários ───────────────────────────────────── */
+.edit-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 30px;
+    margin-bottom: 24px;
+    margin-top: 20px;
+}
+
+.main-content>.edit-doacao-card:not(:has(form)) .edit-form-grid {
+    margin-top: 20px;
+}
+
+.edit-form-grid .form-field-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.edit-form-grid .form-field-perfil label i {
+    color: var(--verde-padrao, #1E8138);
+    font-size: 13px;
+}
+
+/* ── Estrutura Base dos Inputs e Selects ───────────────────── */
+.edit-form-grid input,
+.edit-form-grid select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: auto;
+}
+
+.edit-form-grid input::placeholder {
+    color: #bbb;
+    font-size: 13px;
+}
+
+/* ── Nota de Rodapé ────────────────────────────────────────── */
+.perfil-nota {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border: 1px solid #2f7d46;
+    border-radius: 12px;
+    background: #f3faf5;
+    color: #666;
+}
+
+.perfil-nota strong {
+    color: #000;
+}
+
+/* ── Informações do Sistema (Card Inferior) ───────────────── */
+.info-sistema-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-top: 24px;
+}
+
+.info-sistema-card h3 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 80px;
+}
+
+.info-grid span {
+    color: #9a9a9a;
+    font-size: 14px;
+}
+
+.info-grid p {
+    margin-top: 6px;
+}
+
+.status-ativo {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    background: #e7f6eb;
+    color: #2f7d46;
+    border: 1px solid #2f7d46;
+    border-radius: 20px;
+}
+
+.status-inativo {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    background: #f6e7e7;
+    color: #7d2f2f;
+    border: 1px solid #7d2f2f;
+    border-radius: 20px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+
+/* 2. REGRAS DA AVATAR / FOTO DE PERFIL  */
+
+.edit-card-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #e6f4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.main-content>.edit-doacao-card:not(:has(form)) .edit-card-icon {
+    margin-top: 0;
+    pointer-events: none;
+    cursor: default !important;
+}
+
+.edit-card-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-card-icon i {
+    font-size: 75px;
+    color: var(--verde-padrao, #1E8138);
+}
+
+.main-content>.edit-doacao-card:not(:has(form)) .edit-card-icon i {
+    cursor: default !important;
+}
+
+.camera-icon {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    width: 42px;
+    height: 42px;
+    background: #1E8138;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.camera-icon i {
+    color: white;
+    font-size: 16px;
+    position: static;
+}
+
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+/* 3. BOTÕES E AÇÕES VISUAIS */
+
+.edit-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-remover-foto {
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #c62828;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+/* 4. ISOLAMENTO DO CLIQUE NOS INPUTS */
+
+.input-edit,
+.input-view {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.edit-form-grid input.input-view {
+    outline: none;
+    border-color: #d0d5dd;
+    color: #868686;
+    box-shadow: none;
+}
+
+.edit-form-grid input.input-edit:focus,
+.edit-form-grid select:focus {
+    border-color: var(--verde-padrao, #1E8138);
+    box-shadow: 0 0 0 3px rgba(30, 129, 56, 0.12);
+}
+
+/* 5. RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .edit-form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .edit-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edit-form-actions {
+        flex-direction: column-reverse;
+        padding: 11px 16px;
+        background-color: #1f7a3f;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        border: 2px solid red;
+    }
+
+    .edit-form-actions button {
+        width: 100%;
+    }
+}

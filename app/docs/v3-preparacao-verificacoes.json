@@ -1,0 +1,36 @@
+{
+  "php": 176,
+  "javascript": 45,
+  "tests": [
+    "tests/v3-configuracao-segura.php",
+    "tests/doacao-insercao-pdo.php",
+    "tests/doacao-projeto-opcional.php",
+    "tests/er02-sem-banco.php",
+    "tests/requisito6-endereco.php",
+    "tests/requisito7-cnpj.cjs",
+    "tests/doacao-doador-obrigatorio.cjs",
+    "tests/doacao-projeto-opcional.cjs",
+    "tests/er02-formulario.cjs",
+    "tests/er03-terminologias.cjs"
+  ],
+  "security": {
+    "segredosOriginaisAusentes": true,
+    "dumpAusente": true,
+    "uploadsReaisAusentes": true,
+    "semGit": true,
+    "documentosTestesMigracoesPreservados": true
+  },
+  "sourceUnchanged": true,
+  "integration": {
+    "approved": 37,
+    "isolated": true,
+    "browser": true,
+    "mocks": true
+  },
+  "schema": {
+    "tabelas": 10,
+    "registros": 0,
+    "executado": false
+  },
+  "totalFiles": 271
+}

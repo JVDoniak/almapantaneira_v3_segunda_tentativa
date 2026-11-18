@@ -1,0 +1,30 @@
+{
+  "php": 178,
+  "javascript": 46,
+  "scripts": [
+    "tests/v3-configuracao-segura.php",
+    "tests/doacao-insercao-pdo.php",
+    "tests/doacao-projeto-opcional.php",
+    "tests/er02-sem-banco.php",
+    "tests/requisito6-endereco.php",
+    "tests/requisito7-cnpj.cjs",
+    "tests/doacao-doador-obrigatorio.cjs",
+    "tests/doacao-projeto-opcional.cjs",
+    "tests/er02-formulario.cjs",
+    "tests/er03-terminologias.cjs"
+  ],
+  "integration": 41,
+  "security": {
+    "semCredenciaisOriginaisNosVersionaveis": true,
+    "dadosLocaisPreservados": 38,
+    "dadosRetiradosDoIndice": 38,
+    "origensPreservadas": true,
+    "historicoPreservado": true
+  },
+  "files": {
+    "novos": 37,
+    "alterados": 66,
+    "totalIntegrados": 103,
+    "preservados": 211
+  }
+}

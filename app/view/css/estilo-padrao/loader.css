@@ -1,0 +1,12 @@
+#loader {
+  position: fixed; inset: 0;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, .4); z-index: 9999;
+}
+#loader.ativo { display: flex; }
+#loader::after {
+  content: ""; width: 48px; height: 48px;
+  border: 5px solid #fff; border-top-color: transparent;
+  border-radius: 50%; animation: girar .8s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }

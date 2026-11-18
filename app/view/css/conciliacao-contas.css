@@ -1,0 +1,252 @@
+.content-header h1 {
+    margin: 0;
+    text-align: left;
+}
+
+/* ---------- Cards de resumo---------- */
+.card-pendente { box-shadow: -4px 0 0 0px #f0ad00, 0 2px 12px rgba(0, 0, 0, 0.05); }
+.icone-amarelo { color: #b07d00; background-color: #fff4d6; }
+
+/* ---------- Tabela ---------- */
+.data-table td.valor {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.data-table td.tabela-vazia {
+    text-align: center;
+    color: var(--cinza-texto, #666);
+    padding: 32px 15px;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+    width: 170px;
+}
+
+/* Status (mesmo estilo das tags da visualização do doador) */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge.pendente {
+    background: #fff4d6;
+    color: #8a6100;
+}
+
+.status-badge.confirmada {
+    background: #c8f7c5;
+    color: #2e7d32;
+}
+
+/* Comprovante */
+.link-comprovante {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--verde-padrao, #1f7a3f);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-comprovante:hover {
+    text-decoration: underline;
+}
+
+.sem-comprovante {
+    color: #b0b0b0;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Botão "Confirmar" dentro da linha */
+.btn-confirmar {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--verde-padrao, #1f7a3f);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-confirmar:hover {
+    background-color: var(--verde-hover, #176331);
+}
+
+.table-actions-cell .btn-confirmar i {
+    color: #fff;
+    font-size: 14px;
+}
+
+.table-actions-cell .btn-confirmar i:hover {
+    transform: none;
+}
+
+/* ---------- Modal ---------- */
+#modalConciliacao .modal-content {
+    max-width: 640px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#modalConciliacao .oculta {
+    display: none !important;
+}
+
+.conciliacao-detalhes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 24px;
+    margin-bottom: 18px;
+}
+
+.conciliacao-detalhes .detalhe {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.conciliacao-detalhes .detalhe.full {
+    grid-column: 1 / -1;
+}
+
+.conciliacao-detalhes .detalhe > span {
+    font-size: 12px;
+    color: var(--cinza-texto, #666);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.conciliacao-detalhes .detalhe strong {
+    font-size: 15px;
+    color: var(--preto-padrao, #191919);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.conciliacao-valor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: var(--verde-claro, #e9f7ee);
+}
+
+.conciliacao-valor span {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.conciliacao-valor strong {
+    font-size: 1.4rem;
+    color: var(--verde-padrao, #1f7a3f);
+}
+
+.aviso-conciliacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.aviso-alerta {
+    background-color: #fff4d6;
+    color: #8a6100;
+}
+
+.aviso-sucesso {
+    background-color: #c8f7c5;
+    color: #2e7d32;
+}
+
+.aviso-conciliacao i {
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+.check-recibo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border: 1px solid var(--cinza-borda, #ddd);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* modal-categoria.css aplica width: 80% em todo input; aqui volta ao normal */
+.check-recibo input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    accent-color: var(--verde-padrao, #1f7a3f);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#modalConciliacao .form-actions {
+    margin-top: 24px;
+}
+
+/* ---------- Mensagem de sucesso (toast) ---------- */
+.toast-conciliacao {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 420px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background-color: var(--verde-padrao, #1f7a3f);
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.toast-conciliacao.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 768px) {
+    .conciliacao-detalhes {
+        grid-template-columns: 1fr;
+    }
+
+    .toast-conciliacao {
+        left: 16px;
+        right: 16px;
+        max-width: none;
+    }
+}

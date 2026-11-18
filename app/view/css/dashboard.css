@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+/* ---------- CARDS DE RESUMO ---------- */
+.grade-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    flex: 1 1 220px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background-color: #fff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-recebido  { box-shadow: -4px 0 0 0px #278300, 0 2px 12px rgba(0, 0, 0, 0.05); }
+.card-despesas  { box-shadow: -4px 0 0 0px #ee240173, 0 2px 12px rgba(0, 0, 0, 0.05); }
+.card-doacoes   { box-shadow: -4px 0 0 0px #6c9bff, 0 2px 12px rgba(0, 0, 0, 0.05); }
+.card-saldo     { box-shadow: -4px 0 0 0px #baff59, 0 2px 12px rgba(0, 0, 0, 0.05); }
+.card-pendente  { box-shadow: -4px 0 0 0px #f0ad00, 0 2px 12px rgba(0, 0, 0, 0.05); }
+
+.card-icone {
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icone-verde    { color: green; background-color: #effde9; }
+.icone-vermelho { color: rgb(255, 25, 25); background-color: #ee240142; }
+.icone-azul     { color: blue; background-color: #dde8ff; }
+.icone-cinza    { color: #9c9c9c; background-color: #e2ffb9; }
+.icone-amarelo  { color: #b07d00; background-color: #fff4d6; }
+
+.card-dados {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.card-dados p {
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.card-dados span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-variacao {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #666;
+}
+
+.card-link {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--verde-padrao, #1f7a3f);
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- SELO DE STATUS (Dashboard e Conciliação) ---------- */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge.pendente {
+    background: #fff4d6;
+    color: #8a6100;
+}
+
+.status-badge.confirmada {
+    background: #c8f7c5;
+    color: #2e7d32;
+}
+
+.data-table td.valor {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.data-table td.tabela-vazia {
+    text-align: center;
+    color: var(--cinza-texto, #666);
+    padding: 32px 15px;
+}
+
+/* ---------- PAINÉIS DE GRÁFICO ---------- */
+.container-graficos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+}
+
+.container-graficos > .painel-grafico {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 320px;
+}
+
+.painel-grafico {
+    background-color: var(--branco-padrao, #fff);
+    border-radius: var(--radius-padrao, 12px);
+    padding: 20px 24px;
+    box-shadow: var(--sombra-card, 0 2px 12px rgba(0, 0, 0, 0.07));
+}
+
+.painel-grafico-header,
+.table-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.painel-grafico-header h2,
+.table-card-header h2 {
+    font-size: 1.1rem;
+    color: var(--preto-padrao, #191919);
+}
+
+.painel-total {
+    font-size: 13px;
+    color: var(--cinza-texto, #666);
+}
+
+.grafico-area {
+    position: relative;
+    width: 100%;
+    height: 260px;
+}
+
+.grafico-area-alta {
+    height: 320px;
+}
+
+.grafico-erro {
+    color: var(--cinza-texto, #666);
+    font-size: 14px;
+    padding: 24px 0;
+    text-align: center;
+}
+
+/* Cabeçalho da tabela "Últimas Doações" (dentro do table-card) */
+.table-card-header {
+    align-items: center;
+    padding: 18px 24px 0;
+}
+
+.table-card-header .btn-outline {
+    min-height: 34px;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 768px) {
+    .container-graficos > .painel-grafico {
+        min-width: 100%;
+    }
+
+    .grafico-area-alta {
+        height: 260px;
+    }
+
+    .painel-grafico {
+        padding: 16px;
+    }
+}
+
+/* Período exibido, no canto direito do cabeçalho do Dashboard */
+.periodo-exibido {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background-color: var(--branco-padrao, #fff);
+    border: 1px solid var(--cinza-borda, #ddd);
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+}

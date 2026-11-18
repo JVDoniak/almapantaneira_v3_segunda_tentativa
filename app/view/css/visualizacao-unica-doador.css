@@ -1,0 +1,275 @@
+.card-doador {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.card-doador h3 {
+  margin-bottom: 15px;
+}
+
+.left, .right {
+    flex: 1;
+  
+}
+
+.left p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 8px;
+  background: #ddd;
+  font-size: 12px;
+}
+
+.tag.ativo {
+  background: #c8f7c5;
+  color: #2e7d32;
+}
+
+.tag.recorrente {
+  background: #d0e7ff;
+  color: #1565c0;
+}
+
+.box {
+  height: 85px;
+  width: 600px;
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.box p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.box strong {
+  font-size: 18px;
+}
+.card {
+    padding: 0;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #4a98ad;
+    color: white;
+}
+
+thead th {
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+tbody td {
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2b2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #e1ffbb59;
+}
+
+th:last-child,
+td:last-child {
+    width: 130px;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.acoes i {
+  
+    color: #2f8f46;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.acoes i:hover {
+    transform: scale(1.1);
+}
+
+.acoes input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+.divSec{
+    background-color: rgb(255, 255, 255);
+    width: full;
+    height: 90%;
+    border-radius: 10px;
+    box-shadow: black;
+}   
+    .toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #e0e0e0;
+    border: 1px solid #999;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 2px;
+    top: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.toggle input:checked + .slider {
+    background: #39d353;
+    border-color: #39d353;
+}
+
+.toggle input:checked + .slider::before {
+    transform: translateX(20px);
+
+}.switch {
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 22px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background-color: #999;
+    border-radius: 22px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 16px;
+
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #4cd964;
+}
+
+input:checked + .slider::before {
+    transform: translateX(13px);
+}
+.card1{
+    border-radius: 7px;
+    padding: 10px;
+    height: 100px;
+    background-color: #ffffff;
+}
+.form-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-actions1{
+    margin-top: 25px;
+
+}
+.teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b6922;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+}
+.teste1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DEEEF4;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+}
+.conf{
+  color: white;
+}
+.teste4{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.teste5{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.teste6{
+    margin-top: 5px;
+}
+.div3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
